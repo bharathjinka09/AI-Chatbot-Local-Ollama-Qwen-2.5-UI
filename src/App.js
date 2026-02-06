@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="chat-container">
         <div className="chat-container">
-          <h1>AI Chatbot (Qwen 2.5)</h1>
+          <h1>Ollama AI Chatbot (Qwen 2.5)</h1>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
