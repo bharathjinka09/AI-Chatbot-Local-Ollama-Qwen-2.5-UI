@@ -39,18 +39,18 @@ function App() {
         </div>
         <h1>Ollama AI Chatbot (Qwen 2.5)</h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
-              <textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type your message here..."
-                rows={4}
-                disabled={loading}
-                style={{ flex: 1 }}
-              />
-              <button onClick={sendMessage} disabled={loading || !message.trim()} style={{ height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5em', padding: '0 16px' }}>
-                <span style={{ display: 'inline-block' }}>↑</span>
-              </button>
+                <textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Type your message here..."
+                  rows={4}
+                  disabled={loading}
+                  style={{ flex: 1, height: '100px', minHeight: '100px', maxHeight: '100px', resize: 'none' }}
+                />
+                <button onClick={sendMessage} disabled={loading || !message.trim()} style={{ width: '60px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5em', padding: 0 }}>
+                  <span style={{ display: 'inline-block' }}>↑</span>
+                </button>
             </div>
         <div className="response">
           {loading ? (
