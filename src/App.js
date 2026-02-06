@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import ReactMarkdown from 'react-markdown';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -37,7 +38,7 @@ function App() {
                 <span role="status" aria-live="polite">🤖 Thinking... Please wait while the AI prepares a response.</span>
               </div>
             ) : (
-              response
+              <ReactMarkdown>{response}</ReactMarkdown>
             )}
           </div>
         </div>
