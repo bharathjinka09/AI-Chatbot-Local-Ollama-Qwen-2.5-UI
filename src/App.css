@@ -1,10 +1,21 @@
-.chat-container{
-  max-width: 600px;
+
+.chat-container {
+  max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.chat-container.dark {
+  background-color: #181818;
+  color: #f1f1f1;
+}
+
+.chat-container.light {
+  background-color: #f9f9f9;
+  color: #222;
 }
 
 textarea {
@@ -16,6 +27,13 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
+  background-color: #222;
+  color: #f1f1f1;
+}
+
+.chat-container.light textarea {
+  background-color: #fff;
+  color: #222;
 }
 
 
@@ -28,10 +46,41 @@ button {
   cursor: pointer;
 }
 
-.response{
+.chat-container.dark button {
+  background-color: #333;
+  color: #fff;
+}
+
+.chat-container.light button {
+  background-color: #eee;
+  color: #222;
+}
+
+/* Global dark/light mode styles */
+body.dark-mode {
+  background-color: #181818;
+  color: #f1f1f1;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+.response {
   margin-top: 20px;
   padding: 10px;
-  background-color: #f1f1f1;
   border-radius: 5px;
   text-align: left;
+}
+
+.chat-container.dark .response {
+.chat-container.dark {
+  background-color: transparent;
+  color: inherit;
+}
+}
+.chat-container.light {
+  background-color: transparent;
+  color: inherit;
 }
